@@ -1,10 +1,10 @@
 {
-  "name": "Practice",
+  "name": "Demo App",
   "version": "1.0.0",
-  "description": "Practice Video app",
+  "description": "This app is for Demo Only",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8082"
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8081"
   },
   "author": "",
   "license": "ISC",
