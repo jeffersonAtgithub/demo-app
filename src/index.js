@@ -1,63 +1,55 @@
-import React from 'react'
+import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import logger from 'redux-logger'
+import { createStore, combineReducers } from 'redux'
 import {Provider} from 'react-redux'
-
 import DemoApp from './components/app'
 
-const mathReducer = (state = {
-	inputValues: [],
-	result: 0
-}, action) => {
-	switch(action.type){
-		case "ADD": 
-			state = {
-				...state,
-				result: state.result + action.payload,
-				inputValues: [...state.inputValues, action.payload]
-			}
-			break
+const buttonsState = {
+	buttons: {
+		'new': 'btn-search',
+		'favorites': 'btn-search',
+		'watch later': 'btn-search'
+	},
+	activefilter: 'new'
+}
+const buttonFilterReducer = (state = buttonsState, action) => {
+	if(action.type == 'CHANGE_ACTIVE'){
+		state = {
+			buttons: {
+				...buttonsState.buttons,
+				[action.payload]: 'btn-search active'
+			},
+			activefilter: action.payload
+		}
 	}
 
 	return state
-	
 }
 
-const userReducer = (state = {
-	age: 1,
-	name: 'Jeff1'
-}, action) => {
-	switch(action.type){
-		case "CHANGE_NAME": 
-			state = {
-				...state,
-				name: action.payload
-			}
-			break
+const searchState = {
+	currentsearch: ''
+}
+const searchReducer = (state = searchState, action) => {
+	if(action.type == 'CHANGE_SEARCH'){
+		state = {
+			currentsearch: action.payload
+		}
 	}
 
 	return state
-	
-}
+} 
 
-const myLogger = (store) => (next) => (action) => {
-	console.log("Logged Action: ", action)
-	next(action)
-}
+let store = createStore(combineReducers({buttonFilterReducer, searchReducer}))
 
-const store = createStore(combineReducers({
-	mathReducer, userReducer}), {}, 
-	applyMiddleware(logger))
-
-store.subscribe(()=>{
-	// console.log("Store Updated", store.getState())
+store.subscribe(() => {
+	console.log('Store Changed!', store.getState())
 })
 
+store.dispatch({
+	type: 'CHANGE_ACTIVE',
+	payload: 'new'
+})
 
-ReactDOM.render(
-	<Provider store={store}>
-		<DemoApp />
-	</Provider>, 
-	document.querySelector('.container'))
-
+ReactDOM.render(<Provider store={store}>
+					<DemoApp />
+				</Provider>, document.querySelector('.container'))

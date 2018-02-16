@@ -1,0 +1,94 @@
+.search-container{
+	padding: 20px 10px;
+}
+
+/* Filter Search */
+.searchbar .hide-search{
+	display: none;
+}
+
+.searchbar .filter-search i{
+	position:absolute;
+	color: #90caf9;
+    top: 8px;
+    font-size: 20px;
+    left: 25px;
+}
+
+.searchbar .filter-search input{
+	padding-left: 35px;
+    border: 1px solid #90caf9;
+    letter-spacing: 1px;
+}
+
+.searchbar .filter-search input:focus{
+	outline: 0px;
+    box-shadow: none;
+}
+/* Filter Search */
+
+/* Autocomplete Search */
+.searchbar .autocomplete-search i{
+	position:absolute;
+	color: #90caf9;
+    top: 8px;
+    font-size: 20px;
+    left: 25px;
+    z-index: 1;
+}
+
+.searchbar .autocomplete-search .react-typeahead-input-container input{
+	padding-left: 35px!important;
+    border: 1px solid #90caf9!important;
+    letter-spacing: 1px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: none;
+}
+
+.searchbar .autocomplete-search ul#react-typeahead-options-1{
+	padding-left: 0px;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px 1px #90caf9;
+    border-top: 0px;
+    color: #555;
+}
+
+.searchbar .autocomplete-search ul#react-typeahead-options-1 li{
+	list-style: none;
+	padding-left: 10px;
+}
+.searchbar .autocomplete-search ul#react-typeahead-options-1 li:hover{
+	background-color: rgb(234, 246, 255);
+}
+
+/* Autocomplete Search */
+
+.btn-search{
+    padding: 7px 28px;
+    margin-right: 5px;
+    background-color: #ebebeb;
+    color: #fff!important;
+    cursor: pointer;
+    float: left;
+    webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+}
+.btn-search:hover,
+.btn-search.active{
+	background-color: #90caf9;
+}
+
