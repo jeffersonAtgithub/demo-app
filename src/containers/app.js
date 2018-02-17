@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import Search from './search'
+
+import Search from '../components/search'
 
 class DemoApp extends Component{
 	render(){
 		return(
-			<Search />
+			<div>
+				<Search />
+			</div>
 		)
 	}
 }

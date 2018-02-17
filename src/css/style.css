@@ -61,6 +61,7 @@
     box-shadow: 0px 1px 1px 1px #90caf9;
     border-top: 0px;
     color: #555;
+    z-index: 5;
 }
 
 .searchbar .autocomplete-search ul#react-typeahead-options-1 li{
@@ -91,4 +92,72 @@
 .btn-search.active{
 	background-color: #90caf9;
 }
+
+/*Search Content*/
+
+.search-content{
+    padding: 15px 0px;
+}
+
+.search-content .item-image{
+    position:relative;
+}
+
+.search-content .item-image img{
+    width: 100%;
+}
+
+.search-content .item-title{
+    font-size: 13px;
+    min-height: 50px;
+}
+
+.search-section{
+    background-color: #90caf90d;
+    margin-top: 20px;
+}
+
+.search-title{
+    margin-top: 20px;
+}
+.search-title h4{
+    background-color: #90caf9;
+    color: #fff;
+    padding: 5px 10px 9px 10px;
+}
+
+.no-search h3{
+    text-align: center;
+}
+
+/*Search Content*/
+
+/*Button Controls*/
+.controls{
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+}
+.btn-control{
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #90caf982;
+    color: #fff!important;
+    cursor: pointer;
+    webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 2px;
+}
+
+.btn-control:hover{
+    background-color: #90caf9;
+}
+
+/*Button Controls*/
 
