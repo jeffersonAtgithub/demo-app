@@ -9,7 +9,7 @@
 
 .searchbar .filter-search i{
 	position:absolute;
-	color: #90caf9;
+	color: #42a7f9;
     top: 8px;
     font-size: 20px;
     left: 25px;
@@ -17,7 +17,7 @@
 
 .searchbar .filter-search input{
 	padding-left: 35px;
-    border: 1px solid #90caf9;
+    border: 1px solid #42a7f9;
     letter-spacing: 1px;
 }
 
@@ -30,7 +30,7 @@
 /* Autocomplete Search */
 .searchbar .autocomplete-search i{
 	position:absolute;
-	color: #90caf9;
+	color: #42a7f9;
     top: 8px;
     font-size: 20px;
     left: 25px;
@@ -39,7 +39,7 @@
 
 .searchbar .autocomplete-search .react-typeahead-input-container input{
 	padding-left: 35px!important;
-    border: 1px solid #90caf9!important;
+    border: 1px solid #42a7f9!important;
     letter-spacing: 1px;
     display: block;
     width: 100%;
@@ -58,7 +58,7 @@
 .searchbar .autocomplete-search ul#react-typeahead-options-1{
 	padding-left: 0px;
     background-color: #fff;
-    box-shadow: 0px 1px 1px 1px #90caf9;
+    box-shadow: 0px 1px 1px 1px #42a7f9;
     border-top: 0px;
     color: #555;
     z-index: 5;
@@ -77,7 +77,7 @@
 .btn-search{
     padding: 7px 28px;
     margin-right: 5px;
-    background-color: #ebebeb;
+    background-color: rgba(116, 185, 241, 0.51);
     color: #fff!important;
     cursor: pointer;
     float: left;
@@ -90,7 +90,7 @@
 }
 .btn-search:hover,
 .btn-search.active{
-	background-color: #90caf9;
+	background-color: #42a7f9;
 }
 
 /*Search Content*/
@@ -100,6 +100,8 @@
 }
 
 .search-content .item-image{
+    padding: 2px;
+    border: 1px solid #42a7f9;
     position:relative;
 }
 
@@ -110,20 +112,25 @@
 .search-content .item-title{
     font-size: 13px;
     min-height: 50px;
+    padding-left: 5px;
 }
 
 .search-section{
-    background-color: #90caf90d;
+    background-color: #fff;
     margin-top: 20px;
+}
+
+.search-section.active{
+    background-color: rgba(144, 202, 249, 0.11);
 }
 
 .search-title{
     margin-top: 20px;
 }
 .search-title h4{
-    background-color: #90caf9;
+    background-color: #42a7f9;
     color: #fff;
-    padding: 5px 10px 9px 10px;
+    padding: 6px 10px 7px 10px;
 }
 
 .no-search h3{
@@ -138,12 +145,13 @@
     text-align: center;
     z-index: 1;
     width: 100%;
+    left: 0;
 }
 .btn-control{
     width: 100%;
     padding: 4px;
     font-size: 16px;
-    background-color: #90caf982;
+    background-color: rgba(144, 202, 249, 0.58);
     color: #fff!important;
     cursor: pointer;
     webkit-touch-callout: none;
@@ -154,9 +162,12 @@
     user-select: none;
     margin-bottom: 2px;
 }
+.btn-control.control-hide{
+    display: none;
+}
 
 .btn-control:hover{
-    background-color: #90caf9;
+    background-color: #42a7f9;
 }
 
 /*Button Controls*/

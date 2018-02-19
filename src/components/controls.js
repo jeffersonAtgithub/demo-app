@@ -1,13 +1,8 @@
 import React from 'react'
 
-const Controls = () => {
+const Controls = (props) => {
     return(
-        <div className='controls'>
-            <div className="btn-control">Add to Favorites</div>
-            <div className="btn-control">Watch Later</div>
-            <div className="btn-control">Remove</div>
-            <div className="btn-control">Play</div>
-        </div>
+        <div className={`btn-control ${props.classes}`} onClick={()=>props.onControlClick()}>{props.text}</div>
     )
 }
 

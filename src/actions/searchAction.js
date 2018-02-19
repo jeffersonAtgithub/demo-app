@@ -11,3 +11,17 @@ export function newSearch(videos){
         payload: videos
     }
 }
+
+export function filterSearch(videos){
+    return {
+        type: "FILTER_SEARCH",
+        payload: videos
+    }
+}
+
+export function watchLaterSearch(videos){
+    return {
+        type: "FILTER_SEARCH",
+        payload: videos
+    }
+}

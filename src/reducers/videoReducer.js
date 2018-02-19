@@ -1,18 +1,31 @@
-const videoState = {
-    hovered: false
+const controlState = {
+    controldefaults: {
+        'new': ['Add to Favorites', 'Watch Later', 'Remove', 'Play'],
+        'favorites': ['Watch Later', 'Remove', 'Play'],
+        'watch later': ['Add to Favorites', 'Remove', 'Play']
+    },
+    test: ''
 }
 
-const videoReducer = (state = videoState, action) => {
-    switch (action.type){
-        case 'TOGGLE_HOVER':
+const controlReducer = (state = controlState, action) => {
+    switch(state.type){
+        case 'ADD_FAVORITES':
             state = {
                 ...state,
-                hovered: action.payload
+                test: 'ADD_FAVORITES'
             }
             break
+        case 'ADD_WATCHLATER':
+            console.log('ADD_WATCHLATER')
+            break
+        case 'REMOVE_VIDEO':
+            console.log('REMOVE_VIDEO')
+            break
+        case 'PLAY_VIDEO':
+            console.log('PLAY_VIDEO')
+            break
     }
-
     return state
 }
 
-export default videoReducer
+export default controlReducer
