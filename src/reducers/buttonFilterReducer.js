@@ -4,7 +4,7 @@ const buttonsState = {
         'favorites': 'btn-search',
         'watch later': 'btn-search'
     },
-    activefilter: 'new'
+    activefilter: ''
 }
 
 const buttonFilterReducer = (state = buttonsState, action) => {
@@ -18,14 +18,6 @@ const buttonFilterReducer = (state = buttonsState, action) => {
                 activefilter: action.payload
             }
             break
-        default:
-            state = {
-                ...buttonsState,
-                buttons: {
-                    ...buttonsState.buttons,
-                    'new': 'btn-search active'
-                }
-            }
     }
 
     return state

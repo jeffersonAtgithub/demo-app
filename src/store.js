@@ -2,14 +2,12 @@ import {createStore, combineReducers, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
 
 import buttonFilterReducer from './reducers/buttonFilterReducer'
-import searchReducer from './reducers/searchReducer'
-import videoReducer from './reducers/videoReducer'
+import contentReducer from './reducers/contentReducer'
 
 export default createStore(
     combineReducers({
         buttonFilterReducer,
-        searchReducer,
-        videoReducer
+        contentReducer
     }), {},
     applyMiddleware(
         logger

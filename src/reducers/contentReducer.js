@@ -2,8 +2,7 @@ import { reactLocalStorage } from 'reactjs-localstorage'
 
 const videos = reactLocalStorage.getObject('videos')
 
-const searchState = {
-    term: 'test',
+const contentState = {
     searchtitles: {
         'new': 'New Youtube Videos',
         'favorites': 'Favorite Videos',
@@ -13,17 +12,18 @@ const searchState = {
         'new': (videos.new) ? videos.new : [],
         'favorites': (videos.favorites) ? videos.favorites : [],
         'watch later': (videos['watch later']) ? videos['watch later'] : []
-    }
+    },
+    controldefaults: {
+        'new': ['Add to Favorites', 'Watch Later', 'Remove', 'Play'],
+        'favorites': ['Watch Later', 'Remove', 'Play'],
+        'watch later': ['Add to Favorites', 'Remove', 'Play']
+    },
+    activevideo: {},
+    modalshown: false
 }
 
-const searchReducer = (state = searchState, action) => {
+const contentReducer = (state = contentState, action) => {
     switch (action.type){
-        case 'SET_SEARCH_TERM':
-            state = {
-                ...state,
-                term: action.payload
-            }
-            break
         case 'NEW_SEARCH':
             state = {
                 ...state,
@@ -33,22 +33,36 @@ const searchReducer = (state = searchState, action) => {
                 }
             }
             break
-        case 'FILTER_SEARCH':
+        case 'ALTER_VIDEO':
             state = {
                 ...state,
                 videos: {
                     ...state.videos,
-                    'filter': action.payload
+                    ...action.payload
                 }
             }
             break
-        case 'WATCHLATER_SEARCH':
+        case 'FILTER_VIDEO':
             state = {
                 ...state,
                 videos: {
                     ...state.videos,
-                    'watch later': action.payload
+                    [action.payload.from]: [...action.payload.videos]
                 }
+            }
+            break
+        case 'PLAY_VIDEO':
+            state = {
+                ...state,
+                activevideo: action.payload,
+                modalshown: true
+            }
+            break
+        case 'TOGGLE_MODAL':
+            state = {
+                ...state,
+                activevideo: {},
+                modalshown: action.payload
             }
             break
     }
@@ -56,4 +70,4 @@ const searchReducer = (state = searchState, action) => {
     return state
 }
 
-export default searchReducer
+export default contentReducer
