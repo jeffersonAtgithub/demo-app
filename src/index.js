@@ -2,10 +2,10 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 
-import SearchContainer from './containers/searchContainer'
+import DemoApp from './containers/demoApp'
 
 import store from './store'
 
 ReactDOM.render(<Provider store={store}>
-    <SearchContainer />
+    <DemoApp />
 </Provider>, document.querySelector('.demo-wrapper'))

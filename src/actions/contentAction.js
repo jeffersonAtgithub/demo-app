@@ -19,13 +19,13 @@ export function displayVideos(){
 
 export function newSearch(videos){
     return (dispatch) => {
-        videos.map((video, i) => {
-            const newvideo = {...video, yid: video.id, id: new Date().getTime() + '' + i}
-            axios.post(`http://localhost:3000/new/`, newvideo)
-        })
-
         axios.get(`http://localhost:3000/new`)
             .then((response) => {
+                videos.map((video, i) => {
+                    const newvideo = {...video, yid: video.id, id: new Date().getTime() + '' + i}
+                    axios.post(`http://localhost:3000/new/`, newvideo)
+                    response.data.push(newvideo)
+                })
                 dispatch({
                     type: 'NEW_SEARCH',
                     payload: response.data

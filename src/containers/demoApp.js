@@ -10,7 +10,7 @@ import ModalVideo from '../components/modal'
 import { setButtonActive, handlePageChange } from '../actions/buttonAction'
 import { displayVideos, newSearch, toggleModal, filterSearch } from '../actions/contentAction'
 
-class SearchContainer extends Component {
+class DemoApp extends Component {
 
     componentDidMount(){
         this.props.displayVideos()
@@ -119,4 +119,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(DemoApp)
