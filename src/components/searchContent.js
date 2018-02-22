@@ -6,8 +6,8 @@ const SearchContent = (props) => {
     if(props.videos.length < 1){
         return(
             <div className='row no-search'>
-                <div className="col-md-12">
-                    <h3>{props.searchtitle == 'new' ? 'Search new' : 'Add from new'} videos</h3>
+                <div className='col-md-12'>
+                    <h3>{props.searchtitle == 'new' ? 'Search new' : 'Add from'} videos</h3>
                 </div>
             </div>
         )
@@ -20,8 +20,8 @@ const SearchContent = (props) => {
 
     return(
         <div className='with-search'>
-            <div className="col-md-12">
-                <div className="row">
+            <div className='col-md-12'>
+                <div className='row'>
                     {videos}
                 </div>
             </div>

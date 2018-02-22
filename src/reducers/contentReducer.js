@@ -1,22 +1,18 @@
-import { reactLocalStorage } from 'reactjs-localstorage'
-
-const videos = reactLocalStorage.getObject('videos')
-
 const contentState = {
     searchtitles: {
         'new': 'New Youtube Videos',
         'favorites': 'Favorite Videos',
-        'watch later': 'Watched Later Videos'
+        'watchlater': 'Watch Later Videos'
     },
     videos: {
-        'new': (videos.new) ? videos.new : [],
-        'favorites': (videos.favorites) ? videos.favorites : [],
-        'watch later': (videos['watch later']) ? videos['watch later'] : []
+        'new': [],
+        'favorites': [],
+        'watchlater': []
     },
     controldefaults: {
         'new': ['Add to Favorites', 'Watch Later', 'Remove', 'Play'],
         'favorites': ['Watch Later', 'Remove', 'Play'],
-        'watch later': ['Add to Favorites', 'Remove', 'Play']
+        'watchlater': ['Add to Favorites', 'Remove', 'Play']
     },
     activevideo: {},
     modalshown: false
@@ -31,6 +27,12 @@ const contentReducer = (state = contentState, action) => {
                     ...state.videos,
                     'new': action.payload
                 }
+            }
+            break
+        case 'DISPLAY_VIDEO':
+            state = {
+                ...state,
+                videos: {...action.payload}
             }
             break
         case 'ALTER_VIDEO':

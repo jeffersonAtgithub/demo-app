@@ -1,15 +1,17 @@
 import {createStore, combineReducers, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
+import thunk from 'redux-thunk'
 
-import buttonFilterReducer from './reducers/buttonFilterReducer'
+import buttonReducer from './reducers/buttonReducer'
 import contentReducer from './reducers/contentReducer'
 
 export default createStore(
     combineReducers({
-        buttonFilterReducer,
+        buttonReducer,
         contentReducer
     }), {},
     applyMiddleware(
+        thunk,
         logger
     )
 )

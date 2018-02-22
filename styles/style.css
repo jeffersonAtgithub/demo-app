@@ -107,6 +107,7 @@
     padding: 2px;
     border: 1px solid #42a7f9;
     position:relative;
+    transition: opacity 2s;
 }
 
 .search-content .item-image img{
@@ -185,7 +186,7 @@
 /*Modal*/
 .modal-show{
     display: block!important;
-    opacity: 1!important;
+    opacity: 0.99!important;
     background-color: rgba(0, 0, 0, 0.73);
 }
 
@@ -212,4 +213,29 @@
 }
 
 /*Modal*/
+
+/*Pagination*/
+.pagination{
+    display: block;
+    text-align: right;
+}
+.pagination li{
+    display: inline;
+}
+.pagination li a{
+    padding: 10px 14px;
+    background-color: #fff;
+    color: #42a7f9;
+    text-decoration: none;
+    box-shadow: 0px 1px 0px 0px #42a7f9;
+}
+.pagination li.active a{
+    background-color: #42a7f9;
+    color: #fff;
+}
+.pagination li a:hover{
+    background-color: #42a7f9;
+    color: #fff;
+}
+/*Pagination*/
 

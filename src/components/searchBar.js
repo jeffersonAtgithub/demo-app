@@ -8,13 +8,12 @@ const SearchBar = (props) => {
 				<i className='fa fa-search' />
 				<input onChange={(e)=>props.onSearchChange(e.target.value, props.activefilter)} className='hidden form-control search-input' placeholder='Search...'/>
 		 	</div>
-
 		 	<div className={`autocomplete-search ${(props.activefilter !== 'new') ? 'hide-search' : ''}`}>
 		 		<i className='fa fa-search' />
 			 	<YouTubeAutocomplete
 			        apiKey='AIzaSyBHpKN4Q6Dk-lAfomnxEiacDen1dGB3fZg'
 			        placeHolder='Search...'
-			        maxResults='12'
+			        maxResults='8'
 					callback= {(videos)=> props.newSearch(videos)}
 		      	/>
 		  	</div>

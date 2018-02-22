@@ -4,7 +4,7 @@ const ModalVideo = (props) => {
     let url = 'https://giphy.com/gifs/sSgvbe1m3n93G/html5'
     const isvideonotnull = Object.keys(props.video).length < 1
     if(!isvideonotnull)
-         url =`https://www.youtube.com/embed/${props.video.id.videoId}?autoplay=1`
+         url =`https://www.youtube.com/embed/${props.video.yid.videoId}?autoplay=1`
 
     return (
         <div>

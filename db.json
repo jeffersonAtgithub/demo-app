@@ -1,0 +1,279 @@
+{
+  "new": [],
+  "favorites": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/jt-KxawAPPjrYiLGQqLnKGHgvpE\"",
+      "id": "15192894334796",
+      "snippet": {
+        "publishedAt": "2018-02-19T05:00:00.000Z",
+        "channelId": "UCgyMPfJl7ynJRfE2jQ18rJw",
+        "title": "Tinashe - Faded Love (Vertical Video) ft. Future",
+        "description": "Faded Love” ft. Future out now! http://smarturl.it/zFadedLove?iqID=yt “No Drama” ft. Offset out now! http://smarturl.it/zNoDrama?iqID=yt Watch the official video here: http://smarturl.it/z...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UOfgkkHEcfU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UOfgkkHEcfU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UOfgkkHEcfU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "TinasheOfficialVEVO",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "UOfgkkHEcfU"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/OOOf_buPKYIdl6e7WTJoY8LvuWE\"",
+      "id": "15192894497841",
+      "snippet": {
+        "publishedAt": "2015-12-04T16:33:31.000Z",
+        "channelId": "UCUn6h43w3K7nRYfnZ2B9IGQ",
+        "title": "Alan Walker (feat. Iselin Solheim) - Faded (Lyrics Video)",
+        "description": "WATCH IN HD IS RECOMMENDED!* *FOR LEARNING THE LYRICS OF THIS SONG* ------------------------------------------------------------------------------------------------------ (Lyrics) You...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PAfawGaBt2E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PAfawGaBt2E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PAfawGaBt2E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "NiV-L-A",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "PAfawGaBt2E"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/HxWY_dYfvfVbxXv7DDqoiv9sPNU\"",
+      "id": "15192893217715",
+      "snippet": {
+        "publishedAt": "2017-03-07T01:09:02.000Z",
+        "channelId": "UCITMfe4xPYHqXecejzbq4CQ",
+        "title": "Akala Ko Nung Una LYRIC Video - O.C. Dawgs ft. Future Thug (Chipmunks)",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xXorZuqQVSs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xXorZuqQVSs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xXorZuqQVSs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Rolando Rosales",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "xXorZuqQVSs"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/XDb-datx409TJ6FZSugctMceuH0\"",
+      "id": "15192893217717",
+      "snippet": {
+        "publishedAt": "2017-07-10T08:26:07.000Z",
+        "channelId": "UCrhZGqulOMfiCDbIIlkCCRA",
+        "title": "Patch Quiwa- Simula pa nung una (Original Song)",
+        "description": "Music and lyrics by yours truly :) Don't forget to Subscribe! :) .............................................................................. ***DO NOT REUPLOAD ON YOUR LYRIC CHANNEL ;)...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JqX0puS-oCU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JqX0puS-oCU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JqX0puS-oCU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Patch Quiwa",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "JqX0puS-oCU"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/TBmtl9mwJJyxNEwjYzs_BhFgurE\"",
+      "id": "15192894334780",
+      "snippet": {
+        "publishedAt": "2015-12-04T07:00:30.000Z",
+        "channelId": "UCJrOtniJ0-NWz37R30urifQ",
+        "title": "Alan Walker - Faded",
+        "description": "Listen to ”Faded” on Spotify: http://bit.ly/faded_spotify Listen to ”Faded” via other plattforms: https://AlanWalker.lnk.to/faded Merch available at http://bit.ly/AlanWalkerMerch ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/60ItHLz5WEA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/60ItHLz5WEA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alan Walker",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "60ItHLz5WEA"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/BsU902cwGZcwUHL5XiqivZ6J3uA\"",
+      "id": "15192894334797",
+      "snippet": {
+        "publishedAt": "2017-12-05T13:14:20.000Z",
+        "channelId": "UCJrOtniJ0-NWz37R30urifQ",
+        "title": "Alan Walker - Faded (Live Performance)",
+        "description": "To mark the 2-year anniversary of Faded, I'm happy to share this live performance from my homecoming show in Bergen last year! Hope you guys enjoy. - Alan // Vocalist: Tove Styrke Artists:...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mIxlvVlOIS0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mIxlvVlOIS0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mIxlvVlOIS0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Alan Walker",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "mIxlvVlOIS0"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/mXDpaEeCvIwwxMyzqc5BYqDcWAE\"",
+      "id": "15192893217701",
+      "snippet": {
+        "publishedAt": "2016-12-16T08:03:47.000Z",
+        "channelId": "UCjuiUoq_kGqsMFSQom1lvVQ",
+        "title": "Akala Ko Nung Una LYRIC Video - O.C. Dawgs ft. Future Thug",
+        "description": "AKALA KO NUNG UNA #AKALAKONUNGUNA iTunes : http://itunes.apple.com/album/id1189728240 Spotify : https://open.spotify.com/track/2aoiMd5FGyG5NfVDdiwjuM Google Play : https://play.google.com/store/mu...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kAgXUw44eL0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kAgXUw44eL0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kAgXUw44eL0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Panty Droppaz League",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "kAgXUw44eL0"
+      }
+    }
+  ],
+  "watchlater": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "\"_gJQceDMxJ8gP-8T2HLXUoURK8c/RJ-tKO1zWKc9a794RxEfNHOVFQg\"",
+      "id": "15192893217700",
+      "snippet": {
+        "publishedAt": "2017-09-18T08:00:01.000Z",
+        "channelId": "UCXDPZNH-eEXtrxr5Ert1LWQ",
+        "title": "OC DAWGS ft FUTURE THUG - Akala Ko Nung Una   OFFICIAL MUSIC VIDEO",
+        "description": "Music video by Oc Dawgs. (C) 2017 Panty Droppaz League Recording at - Ex Battalion Music / OcDawgs Exclusive Producers :Ms Leyen Antonio / Panty Droppaz League / Oc Dawgs Director: Iyazu...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Pl5q2xg_e3Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Pl5q2xg_e3Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Pl5q2xg_e3Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Ex Battalion Music",
+        "liveBroadcastContent": "none"
+      },
+      "yid": {
+        "kind": "youtube#video",
+        "videoId": "Pl5q2xg_e3Y"
+      }
+    }
+  ]
+}

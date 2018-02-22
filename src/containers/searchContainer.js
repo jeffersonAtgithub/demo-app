@@ -1,33 +1,53 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { reactLocalStorage } from 'reactjs-localstorage'
+import Pagination from 'react-js-pagination'
 
 import SearchFilterButton from '../components/searchFilterButton'
 import SearchBar from '../components/searchBar'
 import SearchContent from '../components/searchContent'
 import ModalVideo from '../components/modal'
 
-import { setButtonActive } from '../actions/buttonFilterAction'
-import { newSearch, toggleModal, filterSearch } from '../actions/contentAction'
+import { setButtonActive, handlePageChange } from '../actions/buttonAction'
+import { displayVideos, newSearch, toggleModal, filterSearch } from '../actions/contentAction'
 
 class SearchContainer extends Component {
 
+    componentDidMount(){
+        this.props.displayVideos()
+    }
+
     render(){
-        const {contentstate, buttonstate, setButtonActive, newSearch, filterSearch, toggleModal} = this.props
+        const {contentstate, buttonstate, setButtonActive, newSearch, filterSearch, toggleModal, handlePageChange} = this.props
         const activefilter = (buttonstate.activefilter != '') ? buttonstate.activefilter : 'new'
         const searchbuttons = !buttonstate.activefilter ? {...buttonstate.buttons, new: 'btn-search active'} : buttonstate.buttons
-        console.log('searchbuttons', searchbuttons)
         const buttons = Object.entries(searchbuttons).map(([key, value]) => (
             <SearchFilterButton classes={value} key={`button-${key}`} buttontext={key} setButtonActive={()=> setButtonActive(key)}/>
         ))
         const sortedarray = {[activefilter]: contentstate.videos[activefilter],...contentstate.videos}
-        console.log('sortedarray', sortedarray)
         const searchedvideos = Object.entries(sortedarray).map(([key, value]) => {
             const activesection = (key === activefilter) ? 'active' : ''
             const reversedarr = [...value].reverse()
-            const customedvideos = (!activesection && reversedarr.length > 0) ? reversedarr.slice(0, 4) : reversedarr
+            const customedvideos = (!activesection && reversedarr.length > 0) ? reversedarr.slice(0, 4) : [...reversedarr].slice(buttonstate.pagination[activefilter][0], buttonstate.pagination[activefilter][1])
+
+            const pagination = () => {
+                if(activesection == 'active'){
+
+                    return(<Pagination
+                        activePage={buttonstate.pagination[activefilter][1]/8}
+                        totalItemsCount={reversedarr.length}
+                        itemsCountPerPage={8}
+                        pageRangeDisplayed={100}
+                        prevPageText='' nextPageText='' hideNavigation={true}
+                        itemClass='page-item'
+                        activeClass='active'
+                        onChange={(pagenumber) => handlePageChange(pagenumber, activefilter)}
+                    />)
+                }else{
+                    return ''
+                }
+            }
             return (
-                <div className={`search-section ${activesection}`} key={`video-container-${key.replace(' ', '-')}`}>
+                <div className={`search-section ${activesection}`} key={`video-container-${key}`}>
                     <div className='container'>
                         <div className='row'>
                             <div className='col-md-12 search-title'>
@@ -39,7 +59,9 @@ class SearchContainer extends Component {
                                 <SearchContent searchtitle={key} videos={customedvideos}/>
                             </div>
                         </div>
+                        {pagination()}
                     </div>
+
                 </div>
             )
         })
@@ -69,19 +91,20 @@ class SearchContainer extends Component {
 
 const mapStateToProps = (state) => {
     return{
-        buttonstate: state.buttonFilterReducer,
+        buttonstate: state.buttonReducer,
         contentstate: state.contentReducer
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return{
+        displayVideos: () => {
+            dispatch(displayVideos())
+        },
         setButtonActive: (buttonname) => {
             dispatch(setButtonActive(buttonname))
         },
         newSearch: (videos) => {
-            const videosobj = reactLocalStorage.getObject('videos')
-            reactLocalStorage.setObject('videos', {...videosobj, 'new': videos})
             dispatch(newSearch(videos))
         },
         filterSearch: (term, from) => {
@@ -89,6 +112,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         toggleModal: (modalshown) => {
             dispatch(toggleModal(modalshown))
+        },
+        handlePageChange: (pagenumber, activefilter) => {
+            dispatch(handlePageChange(pagenumber, activefilter))
         }
     }
 }
