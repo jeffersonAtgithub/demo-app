@@ -21,20 +21,18 @@ const contentState = {
 const contentReducer = (state = contentState, action) => {
     switch (action.type){
         case 'NEW_SEARCH':
-            state = {
+            return {
                 ...state,
                 videos: {
                     ...state.videos,
                     'new': action.payload
                 }
             }
-            break
         case 'DISPLAY_VIDEO':
-            state = {
+            return {
                 ...state,
                 videos: {...action.payload}
             }
-            break
         case 'ALTER_VIDEO':
             state = {
                 ...state,
@@ -45,28 +43,25 @@ const contentReducer = (state = contentState, action) => {
             }
             break
         case 'FILTER_VIDEO':
-            state = {
+            return {
                 ...state,
                 videos: {
                     ...state.videos,
                     [action.payload.from]: [...action.payload.videos]
                 }
             }
-            break
         case 'PLAY_VIDEO':
-            state = {
+            return{
                 ...state,
                 activevideo: action.payload,
                 modalshown: true
             }
-            break
         case 'TOGGLE_MODAL':
-            state = {
+            return {
                 ...state,
                 activevideo: {},
                 modalshown: action.payload
             }
-            break
     }
 
     return state

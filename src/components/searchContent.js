@@ -7,7 +7,7 @@ const SearchContent = (props) => {
         return(
             <div className='row no-search'>
                 <div className='col-md-12'>
-                    <h3>{props.searchtitle == 'new' ? 'Search new' : 'Add from'} videos</h3>
+                    <h3>{props.searchtitle == 'new' ? 'Search new' : 'Add '} videos</h3>
                 </div>
             </div>
         )
