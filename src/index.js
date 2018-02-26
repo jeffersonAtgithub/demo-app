@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 
-import DemoApp from './containers/demoApp'
+import DemoApp from './components/demoApp'
 
 import store from './store'
 
